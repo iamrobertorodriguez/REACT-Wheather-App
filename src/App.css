@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.weather-box {
+  min-width: 100vw;
+  padding: 1rem 1rem;
   color: white;
+  text-align: center;
+  background-color: #ffffff10;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  box-shadow: 2px 0px 27px 1px rgba(0,0,0,0.81);
+  -webkit-box-shadow: 2px 0px 27px 1px rgba(0,0,0,0.81);
+  -moz-box-shadow: 2px 0px 27px 1px rgba(0,0,0,0.81);
+  font-family: 'Fredoka', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.weather-box>main {
+  padding: .5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.weather-box>section {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  padding: .5rem;
+  padding-top: 0;
+}
+
+.location>h1 {
+  margin-bottom: 2rem;
+}
+
+.location h2 {
+  padding: .5rem;
+}
+
+.change-temp-unit {
+  width: 250px;
+  margin: 2rem;
+  margin-bottom: 0;
+  background-color: white;
+  color: black;
+  padding: 1rem 2rem;
+  border: 0px solid transparent;
+  border-radius: 10px;
+  transition: all .2s;
+}
+
+.change-temp-unit:hover{
+  cursor: pointer;
+  color: white;
+  background-color: #ffffff10;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+.description{
+  margin: 2rem 0;
+  letter-spacing: 12px;
+}
+
+.weather-description h3{
+  margin: .3rem 0;
+  letter-spacing: 2px;
+}
+
+#loading-page {
+  font-family: 'Fredoka', sans-serif;
+  color: white;
+  background-color: gray;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+@media only screen and ( min-width: 480px ) {
+
+  .weather-box{
+    display: flex;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .weather-box>main {
+    border-right: 2px solid white;
+    padding-right: 3rem;
+    margin-right: 3rem;
+  }
+
+  .weather-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+  
+  .more-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .temp-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .other-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 }

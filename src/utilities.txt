@@ -1,0 +1,19 @@
+https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=5069f4e6dc6c95f751f3e04f873df87a
+
+latitude: pos.coords.latitude
+longitude: pos.coords.longitude
+
+list of conditions: https://openweathermap.org/weather-conditions
+clear sky
+few clouds
+scattered clouds
+broken clouds
+shower rain
+rain
+thunderstorm
+snow
+mist
+
+let loadingScreen = document.getElementsByClassName('loading-page')
+        loadingScreen.style.visibility = 'hidden';
+        loadingScreen.style.opacity = 0;
