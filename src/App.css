@@ -72,6 +72,7 @@
 }
 
 #loading-page {
+  padding: 2rem;
   font-family: 'Fredoka', sans-serif;
   color: white;
   background-color: gray;
@@ -81,12 +82,14 @@
   top: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: all 1s;
+  text-align: center;
 }
 
-@media only screen and ( min-width: 480px ) {
+@media only screen and ( min-width: 600px ) {
 
   .weather-box{
     display: flex;
@@ -122,5 +125,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+
+  #loading-page {
+    flex-direction: row;
   }
 }
