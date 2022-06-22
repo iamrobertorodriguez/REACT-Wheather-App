@@ -1,22 +1,8 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import useFetch from '../hooks/useFetch';
 
-const WeatherBox = () =>  {
-
-    const [ lat, setLat ] = useState( null )
-    const [ lon, setLon ] = useState( null )
-    const [ timestamp, setTimestamp ] = useState( null )
-
-    useEffect( (  ) => {
-        const success = pos =>  {
-            setLat( pos.coords.latitude )
-            setLon( pos.coords.longitude )
-            setTimestamp( pos.timestamp )
-        }
-    
-        navigator.geolocation.getCurrentPosition( success );
-    }, [  ] )
+const WeatherBox = ({ lat, lon, timestamp }) =>  {
 
     const response = useFetch( `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=5069f4e6dc6c95f751f3e04f873df87a` )
 
